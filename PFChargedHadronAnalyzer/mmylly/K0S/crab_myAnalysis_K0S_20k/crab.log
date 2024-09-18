@@ -1,0 +1,964 @@
+DEBUG 2021-02-07 12:44:55.915 UTC: 	 CRAB Client version: v3.201110
+DEBUG 2021-02-07 12:44:55.915 UTC: 	 Running on: Linux lxplus769.cern.ch 3.10.0-1160.11.1.el7.x86_64 #1 SMP Fri Dec 18 16:34:56 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-02-07 12:44:55.915 UTC: 	 Executing command: 'submit'
+DEBUG 2021-02-07 12:44:55.915 UTC: 	 Found CRAB cache file /afs/cern.ch/user/m/mmyllyma/.crab3
+INFO 2021-02-07 12:44:55.916 UTC: 	 Will use CRAB configuration file crab_myAnalysis_K0S_20k.py
+DEBUG 2021-02-07 12:44:55.916 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-02-07 12:44:55.920 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2021-02-07 12:44:55.933 UTC: 	 Checking credentials
+DEBUG 2021-02-07 12:44:55.933 UTC: 	 Found proxy file /tmp/x509up_u104199
+DEBUG 2021-02-07 12:44:55.933 UTC: 	 Getting proxy life time left
+DEBUG 2021-02-07 12:44:56.437 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -timeleft
+ output : 42735
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:44:56.942 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -actimeleft
+ output : 42735
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:44:56.942 UTC: 	 Proxy valid for 11:52:15 hours
+DEBUG 2021-02-07 12:44:57.446 UTC: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u104199 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:44:57.524 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+DEBUG 2021-02-07 12:44:58.034 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -identity
+ output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:44:58.041 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-02-07 12:44:58.041 UTC: 	 using a3633836dd8d176e9381cc89a8c8629d52861e19 as credential login name
+DEBUG 2021-02-07 12:44:58.345 UTC: 	 Executing : 
+ command : myproxy-info -l a3633836dd8d176e9381cc89a8c8629d52861e19 -s myproxy.cern.ch
+ output : username: a3633836dd8d176e9381cc89a8c8629d52861e19
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 601:13:19  (25.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:44:58.346 UTC: 	 Myproxy is valid: 2164399
+DEBUG 2021-02-07 12:44:58.346 UTC: 	 Retrieving username ...
+DEBUG 2021-02-07 12:44:58.346 UTC: 	 Retrieving username from CRIC...
+DEBUG 2021-02-07 12:44:59.046 UTC: 	 username is mmyllyma
+DEBUG 2021-02-07 12:44:59.052 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-02-07 12:44:59.052 UTC: 	 using mmyllyma_CRAB as credential login name
+DEBUG 2021-02-07 12:44:59.458 UTC: 	 Executing : 
+ command : myproxy-info -l mmyllyma_CRAB -s myproxy.cern.ch
+ output : username: mmyllyma_CRAB
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 601:13:26  (25.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:44:59.458 UTC: 	 Myproxy is valid: 2164406
+DEBUG 2021-02-07 12:44:59.459 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: a3633836dd8d176e9381cc89a8c8629d52861e19  - validity: 25 days, 1:13:19
+  Credential exists on myproxy: username: mmyllyma_CRAB  - validity: 25 days, 1:13:26
+DEBUG 2021-02-07 12:44:59.459 UTC: 	 Command use: submit
+DEBUG 2021-02-07 12:44:59.459 UTC: 	 Options use: ['-c', 'crab_myAnalysis_K0S_20k.py']
+DEBUG 2021-02-07 12:44:59.518 UTC: 	 CRABClient version: v3.201110
+DEBUG 2021-02-07 12:44:59.518 UTC: 	 Instance is prod
+DEBUG 2021-02-07 12:44:59.518 UTC: 	 Server base url is cmsweb-k8s-prod.cern.ch
+DEBUG 2021-02-07 12:44:59.518 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2021-02-07 12:44:59.518 UTC: 	 Started submission
+DEBUG 2021-02-07 12:44:59.518 UTC: 	 Working on /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k
+DEBUG 2021-02-07 12:44:59.607 UTC: 	 Loading required information from the environment
+DEBUG 2021-02-07 12:44:59.607 UTC: 	 Found CMSSW_10_4_0 for slc7_amd64_gcc700 with base /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0
+DEBUG 2021-02-07 12:44:59.608 UTC: 	 Loading required information from the environment
+DEBUG 2021-02-07 12:44:59.608 UTC: 	 Found CMSSW_10_4_0 for slc7_amd64_gcc700 with base /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0
+DEBUG 2021-02-07 12:44:59.608 UTC: 	 UNIQUE NAME: tarUUID bedbe2af-fa86-4fa2-80e3-61763959af88 
+DEBUG 2021-02-07 12:44:59.608 UTC: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferOutputs = True
+config.General.requestName = 'myAnalysis_K0S_20k'
+config.section_('JobType')
+config.JobType.psetName = 'myAnalysis_K0S_20k.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.outputFiles = ['step99_K0S_20k_trees.root']
+config.JobType.allowUndistributedCMSSW = True
+config.JobType.maxMemoryMB = 2500
+config.section_('Data')
+config.Data.inputDataset = '/SingleK0S/mmyllyma-step3_K0S_20k-d50b77769ed38983f48189deb3e4f4d3/USER'
+config.Data.totalUnits = 20
+config.Data.unitsPerJob = 1
+config.Data.inputDBS = 'phys03'
+config.Data.splitting = 'FileBased'
+config.Data.outLFNDirBase = '/store/user/mmyllyma/CRAB3_TransferData'
+config.section_('Site')
+config.Site.storageSite = 'T2_FI_HIP'
+
+DEBUG 2021-02-07 12:44:59.608 UTC: 	 self.config.JobType.psetName: myAnalysis_K0S_20k.py
+INFO 2021-02-07 12:44:59.608 UTC: 	 Importing CMSSW configuration myAnalysis_K0S_20k.py
+INFO 2021-02-07 12:44:59.890 UTC: 	 Finished importing CMSSW configuration myAnalysis_K0S_20k.py
+DEBUG 2021-02-07 12:44:59.890 UTC: 	 Writing CMSSW configuration to /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/inputs/PSet.py
+DEBUG 2021-02-07 12:44:59.933 UTC: 	 The following EDM output files will be collected: []
+DEBUG 2021-02-07 12:44:59.933 UTC: 	 The following TFile output files will be collected: []
+WARNING 2021-02-07 12:44:59.933 UTC: 	 The following user output files (not listed as PoolOuputModule or TFileService in the CMSSW PSet) will be collected: 'step99_K0S_20k_trees.root'
+DEBUG 2021-02-07 12:44:59.933 UTC: 	 Loading required information from the environment
+DEBUG 2021-02-07 12:44:59.933 UTC: 	 Found CMSSW_10_4_0 for slc7_amd64_gcc700 with base /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0
+DEBUG 2021-02-07 12:44:59.933 UTC: 	 Making tarball in /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/inputs/bedbe2af-fa86-4fa2-80e3-61763959af88default.tgz
+DEBUG 2021-02-07 12:44:59.934 UTC: 	 Checking directory /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/lib
+DEBUG 2021-02-07 12:44:59.934 UTC: 	 Adding directory /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/lib to tarball
+DEBUG 2021-02-07 12:44:59.939 UTC: 	 Checking directory /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/biglib
+DEBUG 2021-02-07 12:44:59.939 UTC: 	 Adding directory /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/biglib to tarball
+DEBUG 2021-02-07 12:44:59.940 UTC: 	 Checking directory /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/module
+DEBUG 2021-02-07 12:44:59.975 UTC: 	 Uploading archive /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/inputs/bedbe2af-fa86-4fa2-80e3-61763959af88default.tgz (54 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch:8443/crabcache
+DEBUG 2021-02-07 12:45:00.056 UTC: 	 Loading required information from the environment
+DEBUG 2021-02-07 12:45:00.056 UTC: 	 Found CMSSW_10_4_0 for slc7_amd64_gcc700 with base /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0
+DEBUG 2021-02-07 12:45:00.056 UTC: 	 Making tarball in /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/inputs/debugFiles.tgz
+DEBUG 2021-02-07 12:45:00.061 UTC: 	 Uploading archive /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/inputs/debugFiles.tgz (2 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch:8443/crabcache
+DEBUG 2021-02-07 12:45:00.099 UTC: 	 Result uploading input files: f42a5040c2aae8d03fda7a3a325819b04d5b43f8eeaa40585c0acaf68e1aba3c.tar.gz 
+WARNING 2021-02-07 12:45:00.099 UTC: 	 Warning: The following output files will not be published, as they are not EDM files: ['step99_K0S_20k_trees.root']
+INFO 2021-02-07 12:45:00.100 UTC: 	 Sending the request to the server at cmsweb-k8s-prod.cern.ch
+DEBUG 2021-02-07 12:45:00.100 UTC: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'ignorelocality': 0, 'savelogsflag': 0, 'useparent': 0, 'asyncdest': 'T2_FI_HIP', 'algoargs': 1, 'cachefilename': 'f42a5040c2aae8d03fda7a3a325819b04d5b43f8eeaa40585c0acaf68e1aba3c.tar.gz', 'numcores': 1, 'addoutputfiles': ['step99_K0S_20k_trees.root'], 'generator': 'pythia', 'maxmemory': 2500, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_10_4_0', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': '', 'inputdata': '/SingleK0S/mmyllyma-step3_K0S_20k-d50b77769ed38983f48189deb3e4f4d3/USER', 'lfn': '/store/user/mmyllyma/CRAB3_TransferData', 'dryrun': 0, 'workflow': 'crab_myAnalysis_K0S_20k', 'cacheurl': u'https://cmsweb.cern.ch:8443/crabcache', 'nonprodsw': 1, 'tfileoutfiles': [], 'oneEventMode': 0, 'debugfilename': 'bb7b14fc6ca647dcd4a99353ab5b6a9aa5abb28f95092f437d70e696100e3c4a.tar.gz', 'saveoutput': 1, 'publication': 1, 'jobarch': 'slc7_amd64_gcc700', 'totalunits': 20, 'splitalgo': 'FileBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': ''} 
+DEBUG 2021-02-07 12:45:00.100 UTC: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=0&useparent=0&asyncdest=T2_FI_HIP&algoargs=1&cachefilename=f42a5040c2aae8d03fda7a3a325819b04d5b43f8eeaa40585c0acaf68e1aba3c.tar.gz&numcores=1&generator=pythia&maxmemory=2500&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_10_4_0&primarydataset=&inputdata=%2FSingleK0S%2Fmmyllyma-step3_K0S_20k-d50b77769ed38983f48189deb3e4f4d3%2FUSER&lfn=%2Fstore%2Fuser%2Fmmyllyma%2FCRAB3_TransferData&dryrun=0&workflow=crab_myAnalysis_K0S_20k&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%3A8443%2Fcrabcache&nonprodsw=1&oneEventMode=0&debugfilename=bb7b14fc6ca647dcd4a99353ab5b6a9aa5abb28f95092f437d70e696100e3c4a.tar.gz&saveoutput=1&publication=1&jobarch=slc7_amd64_gcc700&totalunits=20&splitalgo=FileBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=&addoutputfiles=step99_K0S_20k_trees.root
+DEBUG 2021-02-07 12:45:00.222 UTC: 	 Result: {u'result': [{u'RequestName': u'210207_124500:mmyllyma_crab_myAnalysis_K0S_20k'}]}
+INFO 2021-02-07 12:45:00.224 UTC: 	 Success: Your task has been delivered to the prod CRAB3 server.
+INFO 2021-02-07 12:45:00.225 UTC: 	 Task name: 210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+INFO 2021-02-07 12:45:00.225 UTC: 	 Project dir: ./crab_myAnalysis_K0S_20k
+INFO 2021-02-07 12:45:00.225 UTC: 	 Please use ' crab status -d ./crab_myAnalysis_K0S_20k ' to check how the submission process proceeds.
+DEBUG 2021-02-07 12:45:00.225 UTC: 	 About to return
+INFO 2021-02-07 12:45:00.227 UTC: 	 Log file is /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/crab.log
+DEBUG 2021-02-07 12:46:53.635 UTC: 	 CRAB Client version: v3.201110
+DEBUG 2021-02-07 12:46:53.635 UTC: 	 Running on: Linux lxplus769.cern.ch 3.10.0-1160.11.1.el7.x86_64 #1 SMP Fri Dec 18 16:34:56 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-02-07 12:46:53.635 UTC: 	 Executing command: 'status'
+DEBUG 2021-02-07 12:46:53.636 UTC: 	 Found CRAB cache file /afs/cern.ch/user/m/mmyllyma/.crab3
+DEBUG 2021-02-07 12:46:53.646 UTC: 	 Checking credentials
+DEBUG 2021-02-07 12:46:53.646 UTC: 	 Found proxy file /tmp/x509up_u104199
+DEBUG 2021-02-07 12:46:53.646 UTC: 	 Getting proxy life time left
+DEBUG 2021-02-07 12:46:54.251 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -timeleft
+ output : 42617
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:46:54.755 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -actimeleft
+ output : 42617
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:46:54.755 UTC: 	 Proxy valid for 11:50:17 hours
+DEBUG 2021-02-07 12:46:54.806 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+DEBUG 2021-02-07 12:46:55.317 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -identity
+ output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:46:55.323 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-02-07 12:46:55.324 UTC: 	 using a3633836dd8d176e9381cc89a8c8629d52861e19 as credential login name
+DEBUG 2021-02-07 12:46:55.627 UTC: 	 Executing : 
+ command : myproxy-info -l a3633836dd8d176e9381cc89a8c8629d52861e19 -s myproxy.cern.ch
+ output : username: a3633836dd8d176e9381cc89a8c8629d52861e19
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 601:11:22  (25.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:46:55.628 UTC: 	 Myproxy is valid: 2164282
+DEBUG 2021-02-07 12:46:55.628 UTC: 	 Retrieving username ...
+DEBUG 2021-02-07 12:46:55.629 UTC: 	 Retrieving username from CRIC...
+DEBUG 2021-02-07 12:46:56.383 UTC: 	 username is mmyllyma
+DEBUG 2021-02-07 12:46:56.389 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-02-07 12:46:56.389 UTC: 	 using mmyllyma_CRAB as credential login name
+DEBUG 2021-02-07 12:46:56.697 UTC: 	 Executing : 
+ command : myproxy-info -l mmyllyma_CRAB -s myproxy.cern.ch
+ output : username: mmyllyma_CRAB
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 601:11:29  (25.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:46:56.697 UTC: 	 Myproxy is valid: 2164289
+DEBUG 2021-02-07 12:46:56.697 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: a3633836dd8d176e9381cc89a8c8629d52861e19  - validity: 25 days, 1:11:22
+  Credential exists on myproxy: username: mmyllyma_CRAB  - validity: 25 days, 1:11:29
+DEBUG 2021-02-07 12:46:56.698 UTC: 	 Command use: status
+DEBUG 2021-02-07 12:46:56.698 UTC: 	 Options use: ['crab_myAnalysis_K0S_20k']
+DEBUG 2021-02-07 12:46:56.753 UTC: 	 CRABClient version: v3.201110
+DEBUG 2021-02-07 12:46:56.753 UTC: 	 Instance is prod
+DEBUG 2021-02-07 12:46:56.753 UTC: 	 Server base url is cmsweb-k8s-prod.cern.ch
+DEBUG 2021-02-07 12:46:56.753 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2021-02-07 12:46:56.862 UTC: 	 Got information from server oracle database: {u'result': [u'210207_124500:mmyllyma_crab_myAnalysis_K0S_20k', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2021-02-07 12:45:00.211623', u'None', u'2021-02-07 12:45:52.214926', u'None', u'CMSSW_10_4_0', u'slc7_amd64_gcc700', u'/SingleK0S/mmyllyma-step3_K0S_20k-d50b77769ed38983f48189deb3e4f4d3/USER', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'f42a5040c2aae8d03fda7a3a325819b04d5b43f8eeaa40585c0acaf68e1aba3c.tar.gz', u'https://cmsweb.cern.ch:8443/crabcache', u'mmyllyma', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki', u'cms', u'None', u'None', u'crab_myAnalysis_K0S_20k-00000000000000000000000000000000', u'F', u'T2_FI_HIP', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u"['step99_K0S_20k_trees.root']", u'[]', u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2500', u'10', u'None', u'[]', u'http://vocms0122.cern.ch/mon/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov', u'crab3@vocms0122.cern.ch', u'F', u'[]', u'T', u'/store/user/mmyllyma/CRAB3_TransferData', u'F', u'None', u'F', u'None', u'SingleK0S', u'None', u'bb7b14fc6ca647dcd4a99353ab5b6a9aa5abb28f95092f437d70e696100e3c4a.tar.gz', u'66799321', u'filetransfers', u'F', u'188.185.121.184', u'20.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2021-02-07 12:46:56.862 UTC: 	 CRAB project directory:		/afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k
+INFO 2021-02-07 12:46:56.862 UTC: 	 Task name:			210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+INFO 2021-02-07 12:46:56.862 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0122.cern.ch - crab-prod-tw01
+INFO 2021-02-07 12:46:56.862 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2021-02-07 12:46:56.862 UTC: 	 Task URL to use for HELP:	https://cmsweb-k8s-prod.cern.ch/crabserver/ui/task/210207_124500%3Ammyllyma_crab_myAnalysis_K0S_20k
+INFO 2021-02-07 12:46:56.867 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mmyllyma&var-task=210207_124500%3Ammyllyma_crab_myAnalysis_K0S_20k&from=1612698300000&to=now
+INFO 2021-02-07 12:46:56.867 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2021-02-07 12:46:56.867 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 66799321)
+DEBUG 2021-02-07 12:46:56.867 UTC: 	 Webdir is located at http://vocms0122.cern.ch/mon/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+DEBUG 2021-02-07 12:46:56.926 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch:8443/scheddmon/0122/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+DEBUG 2021-02-07 12:46:56.926 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch:8443/scheddmon/0122/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k/status_cache
+INFO 2021-02-07 12:46:56.959 UTC: 	 Waiting for the Grid scheduler to report back the status of your task
+ERROR 2021-02-07 12:46:56.959 UTC: 	 Cannot retrieve the status_cache file. Maybe the task process has not run yet? Got:
+url=https://cmsweb.cern.ch:8443/scheddmon/0122/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k/status_cache, code=403, reason=Forbidden, headers={'Content-Length': '355', 'Set-Cookie': 'cms-auth=ae36e42e0adabc247c138929b0b612d233e7ced916f8366ad87049bb7a9796c558986be1035e9b23;path=/;secure;httponly;expires=Thu, 01-Jan-1970 00:00:01 GMT', 'Server': 'Apache/2.4.6 (CentOS)', 'Date': 'Sun, 07 Feb 2021 12:46:56 GMT', 'Content-Type': 'text/html; charset=iso-8859-1', 'CMS-Server-Time': 'D=5780 t=1612702016953622'}
+ERROR 2021-02-07 12:46:56.959 UTC: 	 url=https://cmsweb.cern.ch:8443/scheddmon/0122/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k/status_cache, code=403, reason=Forbidden, headers={'Content-Length': '355', 'Set-Cookie': 'cms-auth=ae36e42e0adabc247c138929b0b612d233e7ced916f8366ad87049bb7a9796c558986be1035e9b23;path=/;secure;httponly;expires=Thu, 01-Jan-1970 00:00:01 GMT', 'Server': 'Apache/2.4.6 (CentOS)', 'Date': 'Sun, 07 Feb 2021 12:46:56 GMT', 'Content-Type': 'text/html; charset=iso-8859-1', 'CMS-Server-Time': 'D=5780 t=1612702016953622'}
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.201110.01/lib/CRABClient/Commands/status.py", line 117, in __call__
+    statusCacheData = getDataFromURL(url, self.proxyfilename)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.201110.01/lib/CRABClient/UserUtilities.py", line 163, in getDataFromURL
+    capath=HTTPRequests.getCACertPath())
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.201110.01/lib/WMCore/Services/pycurl_manager.py", line 275, in request
+    raise exc
+HTTPException: url=https://cmsweb.cern.ch:8443/scheddmon/0122/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k/status_cache, code=403, reason=Forbidden, headers={'Content-Length': '355', 'Set-Cookie': 'cms-auth=ae36e42e0adabc247c138929b0b612d233e7ced916f8366ad87049bb7a9796c558986be1035e9b23;path=/;secure;httponly;expires=Thu, 01-Jan-1970 00:00:01 GMT', 'Server': 'Apache/2.4.6 (CentOS)', 'Date': 'Sun, 07 Feb 2021 12:46:56 GMT', 'Content-Type': 'text/html; charset=iso-8859-1', 'CMS-Server-Time': 'D=5780 t=1612702016953622'}
+INFO 2021-02-07 12:46:56.964 UTC: 	 Log file is /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/crab.log
+DEBUG 2021-02-07 12:49:01.971 UTC: 	 CRAB Client version: v3.201110
+DEBUG 2021-02-07 12:49:01.972 UTC: 	 Running on: Linux lxplus769.cern.ch 3.10.0-1160.11.1.el7.x86_64 #1 SMP Fri Dec 18 16:34:56 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-02-07 12:49:01.972 UTC: 	 Executing command: 'status'
+DEBUG 2021-02-07 12:49:01.972 UTC: 	 Found CRAB cache file /afs/cern.ch/user/m/mmyllyma/.crab3
+DEBUG 2021-02-07 12:49:01.982 UTC: 	 Checking credentials
+DEBUG 2021-02-07 12:49:01.983 UTC: 	 Found proxy file /tmp/x509up_u104199
+DEBUG 2021-02-07 12:49:01.983 UTC: 	 Getting proxy life time left
+DEBUG 2021-02-07 12:49:02.587 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -timeleft
+ output : 42489
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:49:03.192 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -actimeleft
+ output : 42488
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:49:03.192 UTC: 	 Proxy lifetime 42489 secs is different from voms extension lifetime 42488 secs for proxy: /tmp/x509up_u104199
+DEBUG 2021-02-07 12:49:03.192 UTC: 	 Proxy valid for 11:48:08 hours
+DEBUG 2021-02-07 12:49:03.301 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+DEBUG 2021-02-07 12:49:03.812 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -identity
+ output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:49:03.818 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-02-07 12:49:03.819 UTC: 	 using a3633836dd8d176e9381cc89a8c8629d52861e19 as credential login name
+DEBUG 2021-02-07 12:49:04.122 UTC: 	 Executing : 
+ command : myproxy-info -l a3633836dd8d176e9381cc89a8c8629d52861e19 -s myproxy.cern.ch
+ output : username: a3633836dd8d176e9381cc89a8c8629d52861e19
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 601:09:13  (25.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:49:04.123 UTC: 	 Myproxy is valid: 2164153
+DEBUG 2021-02-07 12:49:04.124 UTC: 	 Retrieving username ...
+DEBUG 2021-02-07 12:49:04.124 UTC: 	 Retrieving username from CRIC...
+DEBUG 2021-02-07 12:49:04.854 UTC: 	 username is mmyllyma
+DEBUG 2021-02-07 12:49:04.860 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-02-07 12:49:04.861 UTC: 	 using mmyllyma_CRAB as credential login name
+DEBUG 2021-02-07 12:49:05.264 UTC: 	 Executing : 
+ command : myproxy-info -l mmyllyma_CRAB -s myproxy.cern.ch
+ output : username: mmyllyma_CRAB
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 601:09:20  (25.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:49:05.265 UTC: 	 Myproxy is valid: 2164160
+DEBUG 2021-02-07 12:49:05.265 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: a3633836dd8d176e9381cc89a8c8629d52861e19  - validity: 25 days, 1:09:13
+  Credential exists on myproxy: username: mmyllyma_CRAB  - validity: 25 days, 1:09:20
+DEBUG 2021-02-07 12:49:05.266 UTC: 	 Command use: status
+DEBUG 2021-02-07 12:49:05.266 UTC: 	 Options use: ['crab_myAnalysis_K0S_20k']
+DEBUG 2021-02-07 12:49:05.889 UTC: 	 CRABClient version: v3.201110
+DEBUG 2021-02-07 12:49:05.889 UTC: 	 Instance is prod
+DEBUG 2021-02-07 12:49:05.889 UTC: 	 Server base url is cmsweb-k8s-prod.cern.ch
+DEBUG 2021-02-07 12:49:05.889 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2021-02-07 12:49:05.936 UTC: 	 Got information from server oracle database: {u'result': [u'210207_124500:mmyllyma_crab_myAnalysis_K0S_20k', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2021-02-07 12:45:00.211623', u'None', u'2021-02-07 12:45:52.214926', u'None', u'CMSSW_10_4_0', u'slc7_amd64_gcc700', u'/SingleK0S/mmyllyma-step3_K0S_20k-d50b77769ed38983f48189deb3e4f4d3/USER', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'f42a5040c2aae8d03fda7a3a325819b04d5b43f8eeaa40585c0acaf68e1aba3c.tar.gz', u'https://cmsweb.cern.ch:8443/crabcache', u'mmyllyma', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki', u'cms', u'None', u'None', u'crab_myAnalysis_K0S_20k-00000000000000000000000000000000', u'F', u'T2_FI_HIP', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u"['step99_K0S_20k_trees.root']", u'[]', u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2500', u'10', u'None', u'[]', u'http://vocms0122.cern.ch/mon/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov', u'crab3@vocms0122.cern.ch', u'F', u'[]', u'T', u'/store/user/mmyllyma/CRAB3_TransferData', u'F', u'None', u'F', u'None', u'SingleK0S', u'None', u'bb7b14fc6ca647dcd4a99353ab5b6a9aa5abb28f95092f437d70e696100e3c4a.tar.gz', u'66799321', u'filetransfers', u'F', u'188.185.121.184', u'20.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2021-02-07 12:49:05.937 UTC: 	 CRAB project directory:		/afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k
+INFO 2021-02-07 12:49:05.937 UTC: 	 Task name:			210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+INFO 2021-02-07 12:49:05.937 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0122.cern.ch - crab-prod-tw01
+INFO 2021-02-07 12:49:05.937 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2021-02-07 12:49:05.937 UTC: 	 Task URL to use for HELP:	https://cmsweb-k8s-prod.cern.ch/crabserver/ui/task/210207_124500%3Ammyllyma_crab_myAnalysis_K0S_20k
+INFO 2021-02-07 12:49:05.941 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mmyllyma&var-task=210207_124500%3Ammyllyma_crab_myAnalysis_K0S_20k&from=1612698300000&to=now
+INFO 2021-02-07 12:49:05.941 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2021-02-07 12:49:05.941 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 66799321)
+DEBUG 2021-02-07 12:49:05.941 UTC: 	 Webdir is located at http://vocms0122.cern.ch/mon/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+DEBUG 2021-02-07 12:49:14.284 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch:8443/scheddmon/0122/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+DEBUG 2021-02-07 12:49:14.284 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch:8443/scheddmon/0122/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k/status_cache
+DEBUG 2021-02-07 12:49:14.319 UTC: 	 Got information from status cache file: {'11': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799333.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '10': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799337.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '13': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799335.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '12': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799338.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '15': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799334.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '14': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799336.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '17': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799341.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '16': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799340.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '19': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799339.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '18': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799342.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '1': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701957.0], 'JobIds': ['66799324.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '3': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799326.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '2': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701957.0], 'JobIds': ['66799325.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '5': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799328.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '4': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799327.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '7': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799329.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '6': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799330.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '9': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799332.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '20': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799343.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '8': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799331.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}}
+INFO 2021-02-07 12:49:14.319 UTC: 	 Status on the scheduler:	SUBMITTED
+INFO 2021-02-07 12:49:14.319 UTC: 	 
+Jobs status:                    idle         		100.0% (20/20)
+INFO 2021-02-07 12:49:14.319 UTC: 	 
+No publication information available yet
+INFO 2021-02-07 12:49:14.322 UTC: 	 Log file is /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/crab.log
+DEBUG 2021-02-07 12:52:07.173 UTC: 	 CRAB Client version: v3.201110
+DEBUG 2021-02-07 12:52:07.174 UTC: 	 Running on: Linux lxplus769.cern.ch 3.10.0-1160.11.1.el7.x86_64 #1 SMP Fri Dec 18 16:34:56 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-02-07 12:52:07.174 UTC: 	 Executing command: 'status'
+DEBUG 2021-02-07 12:52:07.174 UTC: 	 Found CRAB cache file /afs/cern.ch/user/m/mmyllyma/.crab3
+DEBUG 2021-02-07 12:52:07.183 UTC: 	 Checking credentials
+DEBUG 2021-02-07 12:52:07.183 UTC: 	 Found proxy file /tmp/x509up_u104199
+DEBUG 2021-02-07 12:52:07.183 UTC: 	 Getting proxy life time left
+DEBUG 2021-02-07 12:52:07.787 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -timeleft
+ output : 42304
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:52:08.292 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -actimeleft
+ output : 42303
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:52:08.292 UTC: 	 Proxy lifetime 42304 secs is different from voms extension lifetime 42303 secs for proxy: /tmp/x509up_u104199
+DEBUG 2021-02-07 12:52:08.292 UTC: 	 Proxy valid for 11:45:03 hours
+DEBUG 2021-02-07 12:52:08.342 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+DEBUG 2021-02-07 12:52:08.852 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -identity
+ output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:52:08.858 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-02-07 12:52:08.858 UTC: 	 using a3633836dd8d176e9381cc89a8c8629d52861e19 as credential login name
+DEBUG 2021-02-07 12:52:09.162 UTC: 	 Executing : 
+ command : myproxy-info -l a3633836dd8d176e9381cc89a8c8629d52861e19 -s myproxy.cern.ch
+ output : username: a3633836dd8d176e9381cc89a8c8629d52861e19
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 601:06:08  (25.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:52:09.163 UTC: 	 Myproxy is valid: 2163968
+DEBUG 2021-02-07 12:52:09.163 UTC: 	 Retrieving username ...
+DEBUG 2021-02-07 12:52:09.163 UTC: 	 Retrieving username from CRIC...
+DEBUG 2021-02-07 12:52:10.551 UTC: 	 username is mmyllyma
+DEBUG 2021-02-07 12:52:10.557 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-02-07 12:52:10.557 UTC: 	 using mmyllyma_CRAB as credential login name
+DEBUG 2021-02-07 12:52:10.860 UTC: 	 Executing : 
+ command : myproxy-info -l mmyllyma_CRAB -s myproxy.cern.ch
+ output : username: mmyllyma_CRAB
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 601:06:15  (25.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 12:52:10.861 UTC: 	 Myproxy is valid: 2163975
+DEBUG 2021-02-07 12:52:10.861 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: a3633836dd8d176e9381cc89a8c8629d52861e19  - validity: 25 days, 1:06:08
+  Credential exists on myproxy: username: mmyllyma_CRAB  - validity: 25 days, 1:06:15
+DEBUG 2021-02-07 12:52:10.861 UTC: 	 Command use: status
+DEBUG 2021-02-07 12:52:10.862 UTC: 	 Options use: ['crab_myAnalysis_K0S_20k']
+DEBUG 2021-02-07 12:52:10.967 UTC: 	 CRABClient version: v3.201110
+DEBUG 2021-02-07 12:52:10.967 UTC: 	 Instance is prod
+DEBUG 2021-02-07 12:52:10.967 UTC: 	 Server base url is cmsweb-k8s-prod.cern.ch
+DEBUG 2021-02-07 12:52:10.967 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2021-02-07 12:52:11.047 UTC: 	 Got information from server oracle database: {u'result': [u'210207_124500:mmyllyma_crab_myAnalysis_K0S_20k', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2021-02-07 12:45:00.211623', u'None', u'2021-02-07 12:45:52.214926', u'None', u'CMSSW_10_4_0', u'slc7_amd64_gcc700', u'/SingleK0S/mmyllyma-step3_K0S_20k-d50b77769ed38983f48189deb3e4f4d3/USER', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'f42a5040c2aae8d03fda7a3a325819b04d5b43f8eeaa40585c0acaf68e1aba3c.tar.gz', u'https://cmsweb.cern.ch:8443/crabcache', u'mmyllyma', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki', u'cms', u'None', u'None', u'crab_myAnalysis_K0S_20k-00000000000000000000000000000000', u'F', u'T2_FI_HIP', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u"['step99_K0S_20k_trees.root']", u'[]', u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2500', u'10', u'None', u'[]', u'http://vocms0122.cern.ch/mon/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov', u'crab3@vocms0122.cern.ch', u'F', u'[]', u'T', u'/store/user/mmyllyma/CRAB3_TransferData', u'F', u'None', u'F', u'None', u'SingleK0S', u'None', u'bb7b14fc6ca647dcd4a99353ab5b6a9aa5abb28f95092f437d70e696100e3c4a.tar.gz', u'66799321', u'filetransfers', u'F', u'188.185.121.184', u'20.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2021-02-07 12:52:11.048 UTC: 	 CRAB project directory:		/afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k
+INFO 2021-02-07 12:52:11.048 UTC: 	 Task name:			210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+INFO 2021-02-07 12:52:11.048 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0122.cern.ch - crab-prod-tw01
+INFO 2021-02-07 12:52:11.048 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2021-02-07 12:52:11.048 UTC: 	 Task URL to use for HELP:	https://cmsweb-k8s-prod.cern.ch/crabserver/ui/task/210207_124500%3Ammyllyma_crab_myAnalysis_K0S_20k
+INFO 2021-02-07 12:52:11.053 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mmyllyma&var-task=210207_124500%3Ammyllyma_crab_myAnalysis_K0S_20k&from=1612698300000&to=now
+INFO 2021-02-07 12:52:11.053 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2021-02-07 12:52:11.053 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 66799321)
+DEBUG 2021-02-07 12:52:11.053 UTC: 	 Webdir is located at http://vocms0122.cern.ch/mon/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+DEBUG 2021-02-07 12:52:11.196 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch:8443/scheddmon/0122/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+DEBUG 2021-02-07 12:52:11.196 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch:8443/scheddmon/0122/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k/status_cache
+DEBUG 2021-02-07 12:52:11.231 UTC: 	 Got information from status cache file: {'11': {'Retries': 0, 'WallDurations': [8.0, 132.27458691596985, 132.27458691596985], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799333.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [3160], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}, '10': {'Retries': 0, 'WallDurations': [8.0, 132.27458691596985, 132.27458691596985], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799337.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [35600], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}, '13': {'Retries': 0, 'WallDurations': [9.0, 133.27458691596985, 133.27458691596985], 'StartTimes': [1612702189.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799335.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [44272], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}, '12': {'Retries': 0, 'WallDurations': [10.0, 130.27458691596985, 130.27458691596985], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799338.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [3156], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}, '15': {'Retries': 0, 'WallDurations': [9.0, 133.27458691596985, 133.27458691596985], 'StartTimes': [1612702189.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799334.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [57920], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}, '14': {'Retries': 0, 'WallDurations': [8.0, 133.27458691596985, 133.27458691596985], 'StartTimes': [1612702189.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799336.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [68452], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}, '17': {'Retries': 0, 'WallDurations': [8.0, 131.27458691596985, 131.27458691596985], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799341.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [28224], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}, '16': {'Retries': 0, 'WallDurations': [9.0, 131.27458691596985, 131.27458691596985], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799340.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [44324], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}, '19': {'Retries': 0, 'WallDurations': [9.0, 131.27458691596985, 131.27458691596985], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799339.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [47712], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}, '18': {'Retries': 0, 'WallDurations': [8.0, 130.27458691596985, 130.27458691596985], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799342.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [1892], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}, '1': {'Retries': 0, 'WallDurations': [9.0, 131.27458691596985, 131.27458691596985], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701957.0], 'JobIds': ['66799324.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [3724], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}, '3': {'Retries': 0, 'WallDurations': [8.0, 130.27458691596985, 130.27458691596985], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799326.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [57544], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}, '2': {'Retries': 0, 'WallDurations': [8.0, 130.27458691596985, 130.27458691596985], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701957.0], 'JobIds': ['66799325.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [3152], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}, '5': {'Retries': 0, 'WallDurations': [8.0, 130.27458691596985, 130.27458691596985], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799328.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [3160], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}, '4': {'Retries': 0, 'WallDurations': [8.0, 127.27458691596985, 127.27458691596985], 'StartTimes': [1612702195.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799327.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [3164], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}, '7': {'Retries': 0, 'WallDurations': [9.0, 132.27458691596985, 132.27458691596985], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799329.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [48064], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}, '6': {'Retries': 0, 'WallDurations': [8.0, 132.27458691596985, 132.27458691596985], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799330.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [3160], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}, '9': {'Retries': 0, 'WallDurations': [8.0, 132.27458691596985, 132.27458691596985], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799332.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [44496], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}, '20': {'Retries': 0, 'WallDurations': [8.0, 131.27458691596985, 131.27458691596985], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799343.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [45328], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}, '8': {'Retries': 0, 'WallDurations': [9.0, 131.27458691596985, 131.27458691596985], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799331.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [40748], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [0.0]}}
+INFO 2021-02-07 12:52:11.231 UTC: 	 Status on the scheduler:	SUBMITTED
+INFO 2021-02-07 12:52:11.232 UTC: 	 
+Jobs status:                    running      		100.0% (20/20)
+INFO 2021-02-07 12:52:11.232 UTC: 	 
+No publication information available yet
+INFO 2021-02-07 12:52:11.246 UTC: 	 Log file is /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/crab.log
+DEBUG 2021-02-07 13:31:43.875 UTC: 	 CRAB Client version: v3.201110
+DEBUG 2021-02-07 13:31:43.876 UTC: 	 Running on: Linux lxplus769.cern.ch 3.10.0-1160.11.1.el7.x86_64 #1 SMP Fri Dec 18 16:34:56 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-02-07 13:31:43.876 UTC: 	 Executing command: 'status'
+DEBUG 2021-02-07 13:31:43.877 UTC: 	 Found CRAB cache file /afs/cern.ch/user/m/mmyllyma/.crab3
+DEBUG 2021-02-07 13:31:43.930 UTC: 	 Checking credentials
+DEBUG 2021-02-07 13:31:43.931 UTC: 	 Found proxy file /tmp/x509up_u104199
+DEBUG 2021-02-07 13:31:43.931 UTC: 	 Getting proxy life time left
+DEBUG 2021-02-07 13:31:44.535 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -timeleft
+ output : 39927
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 13:31:45.040 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -actimeleft
+ output : 39926
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 13:31:45.040 UTC: 	 Proxy lifetime 39927 secs is different from voms extension lifetime 39926 secs for proxy: /tmp/x509up_u104199
+DEBUG 2021-02-07 13:31:45.040 UTC: 	 Proxy valid for 11:05:26 hours
+DEBUG 2021-02-07 13:31:45.147 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+DEBUG 2021-02-07 13:31:45.658 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -identity
+ output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 13:31:45.665 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-02-07 13:31:45.665 UTC: 	 using a3633836dd8d176e9381cc89a8c8629d52861e19 as credential login name
+DEBUG 2021-02-07 13:31:46.069 UTC: 	 Executing : 
+ command : myproxy-info -l a3633836dd8d176e9381cc89a8c8629d52861e19 -s myproxy.cern.ch
+ output : username: a3633836dd8d176e9381cc89a8c8629d52861e19
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 600:26:31  (25.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 13:31:46.070 UTC: 	 Myproxy is valid: 2161591
+DEBUG 2021-02-07 13:31:46.070 UTC: 	 Retrieving username ...
+DEBUG 2021-02-07 13:31:46.070 UTC: 	 Retrieving username from CRIC...
+DEBUG 2021-02-07 13:31:46.760 UTC: 	 username is mmyllyma
+DEBUG 2021-02-07 13:31:46.766 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-02-07 13:31:46.766 UTC: 	 using mmyllyma_CRAB as credential login name
+DEBUG 2021-02-07 13:31:47.169 UTC: 	 Executing : 
+ command : myproxy-info -l mmyllyma_CRAB -s myproxy.cern.ch
+ output : username: mmyllyma_CRAB
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 600:26:38  (25.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 13:31:47.170 UTC: 	 Myproxy is valid: 2161598
+DEBUG 2021-02-07 13:31:47.170 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: a3633836dd8d176e9381cc89a8c8629d52861e19  - validity: 25 days, 0:26:31
+  Credential exists on myproxy: username: mmyllyma_CRAB  - validity: 25 days, 0:26:38
+DEBUG 2021-02-07 13:31:47.170 UTC: 	 Command use: status
+DEBUG 2021-02-07 13:31:47.170 UTC: 	 Options use: ['crab_myAnalysis_K0S_20k']
+DEBUG 2021-02-07 13:31:47.273 UTC: 	 CRABClient version: v3.201110
+DEBUG 2021-02-07 13:31:47.273 UTC: 	 Instance is prod
+DEBUG 2021-02-07 13:31:47.273 UTC: 	 Server base url is cmsweb-k8s-prod.cern.ch
+DEBUG 2021-02-07 13:31:47.273 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2021-02-07 13:31:47.378 UTC: 	 Got information from server oracle database: {u'result': [u'210207_124500:mmyllyma_crab_myAnalysis_K0S_20k', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2021-02-07 12:45:00.211623', u'None', u'2021-02-07 12:45:52.214926', u'None', u'CMSSW_10_4_0', u'slc7_amd64_gcc700', u'/SingleK0S/mmyllyma-step3_K0S_20k-d50b77769ed38983f48189deb3e4f4d3/USER', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'f42a5040c2aae8d03fda7a3a325819b04d5b43f8eeaa40585c0acaf68e1aba3c.tar.gz', u'https://cmsweb.cern.ch:8443/crabcache', u'mmyllyma', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki', u'cms', u'None', u'None', u'crab_myAnalysis_K0S_20k-00000000000000000000000000000000', u'F', u'T2_FI_HIP', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u"['step99_K0S_20k_trees.root']", u'[]', u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2500', u'10', u'None', u'[]', u'http://vocms0122.cern.ch/mon/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov', u'crab3@vocms0122.cern.ch', u'F', u'[]', u'T', u'/store/user/mmyllyma/CRAB3_TransferData', u'F', u'None', u'F', u'None', u'SingleK0S', u'None', u'bb7b14fc6ca647dcd4a99353ab5b6a9aa5abb28f95092f437d70e696100e3c4a.tar.gz', u'66799321', u'filetransfers', u'F', u'188.185.121.184', u'20.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2021-02-07 13:31:47.379 UTC: 	 CRAB project directory:		/afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k
+INFO 2021-02-07 13:31:47.379 UTC: 	 Task name:			210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+INFO 2021-02-07 13:31:47.379 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0122.cern.ch - crab-prod-tw01
+INFO 2021-02-07 13:31:47.379 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2021-02-07 13:31:47.379 UTC: 	 Task URL to use for HELP:	https://cmsweb-k8s-prod.cern.ch/crabserver/ui/task/210207_124500%3Ammyllyma_crab_myAnalysis_K0S_20k
+INFO 2021-02-07 13:31:47.383 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mmyllyma&var-task=210207_124500%3Ammyllyma_crab_myAnalysis_K0S_20k&from=1612698300000&to=now
+INFO 2021-02-07 13:31:47.383 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2021-02-07 13:31:47.383 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 66799321)
+DEBUG 2021-02-07 13:31:47.383 UTC: 	 Webdir is located at http://vocms0122.cern.ch/mon/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+DEBUG 2021-02-07 13:31:47.449 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch:8443/scheddmon/0122/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+DEBUG 2021-02-07 13:31:47.449 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch:8443/scheddmon/0122/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k/status_cache
+DEBUG 2021-02-07 13:31:47.484 UTC: 	 Got information from status cache file: {'11': {'Retries': 0, 'WallDurations': [8.0, 132.27458691596985, 159.0], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799333.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3160], 'TotalUserCpuTimeHistory': [10], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '10': {'Retries': 0, 'WallDurations': [8.0, 132.27458691596985, 159.0], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799337.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [35600], 'TotalUserCpuTimeHistory': [14], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '13': {'Retries': 0, 'WallDurations': [9.0, 133.27458691596985, 160.0], 'StartTimes': [1612702189.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799335.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [44272], 'TotalUserCpuTimeHistory': [10], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '12': {'Retries': 0, 'WallDurations': [10.0, 130.27458691596985, 157.0], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799338.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3156], 'TotalUserCpuTimeHistory': [12], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '15': {'Retries': 0, 'WallDurations': [9.0, 133.27458691596985, 160.0], 'StartTimes': [1612702189.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799334.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [57920], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '14': {'Retries': 0, 'WallDurations': [8.0, 133.27458691596985, 159.0], 'StartTimes': [1612702189.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799336.0'], 'EndTimes': [1612702348.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [68452], 'TotalUserCpuTimeHistory': [12], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [2]}, '17': {'Retries': 0, 'WallDurations': [8.0, 131.27458691596985, 158.0], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799341.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [28224], 'TotalUserCpuTimeHistory': [13], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [2]}, '16': {'Retries': 0, 'WallDurations': [9.0, 131.27458691596985, 157.0], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799340.0'], 'EndTimes': [1612702348.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [44324], 'TotalUserCpuTimeHistory': [10], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '19': {'Retries': 0, 'WallDurations': [9.0, 131.27458691596985, 158.0], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799339.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [47712], 'TotalUserCpuTimeHistory': [11], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '18': {'Retries': 0, 'WallDurations': [8.0, 130.27458691596985, 157.0], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799342.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1892], 'TotalUserCpuTimeHistory': [8], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '1': {'Retries': 0, 'WallDurations': [9.0, 131.27458691596985, 157.0], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701957.0], 'JobIds': ['66799324.0'], 'EndTimes': [1612702348.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3724], 'TotalUserCpuTimeHistory': [13], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [2]}, '3': {'Retries': 0, 'WallDurations': [8.0, 130.27458691596985, 157.0], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799326.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [57544], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '2': {'Retries': 0, 'WallDurations': [8.0, 130.27458691596985, 157.0], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701957.0], 'JobIds': ['66799325.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3152], 'TotalUserCpuTimeHistory': [14], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '5': {'Retries': 0, 'WallDurations': [8.0, 130.27458691596985, 156.0], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799328.0'], 'EndTimes': [1612702348.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3160], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '4': {'Retries': 0, 'WallDurations': [8.0, 127.27458691596985, 154.0], 'StartTimes': [1612702195.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799327.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3164], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '7': {'Retries': 0, 'WallDurations': [9.0, 132.27458691596985, 159.0], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799329.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [48064], 'TotalUserCpuTimeHistory': [11], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '6': {'Retries': 0, 'WallDurations': [8.0, 132.27458691596985, 159.0], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799330.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3160], 'TotalUserCpuTimeHistory': [13], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [2]}, '9': {'Retries': 0, 'WallDurations': [8.0, 132.27458691596985, 159.0], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799332.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [44496], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '20': {'Retries': 0, 'WallDurations': [8.0, 131.27458691596985, 158.0], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799343.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [45328], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '8': {'Retries': 0, 'WallDurations': [9.0, 131.27458691596985, 158.0], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799331.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [40748], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}}
+INFO 2021-02-07 13:31:47.484 UTC: 	 Status on the scheduler:	COMPLETED
+INFO 2021-02-07 13:31:47.484 UTC: 	 
+Jobs status:                    finished     		100.0% (20/20)
+INFO 2021-02-07 13:31:47.541 UTC: 	 
+No publication information available yet
+INFO 2021-02-07 13:31:47.542 UTC: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2021-02-07 13:31:47.542 UTC: 	 
+Warning: the max jobs memory is less than 70% of the task requested value (2500 MB), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2021-02-07 13:31:47.542 UTC: 	 
+Warning: the average jobs CPU efficiency is less than 50%, please consider to improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task
+INFO 2021-02-07 13:31:47.542 UTC: 	 
+Summary of run jobs:
+ * Memory: 3MB min, 66MB max, 29MB ave
+ * Runtime: 0:02:34 min, 0:02:40 max, 0:02:37 ave
+ * CPU eff: 6% min, 10% max, 8% ave
+ * Waste: 0:46:36 (47% of total)
+
+INFO 2021-02-07 13:31:47.640 UTC: 	 Log file is /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/crab.log
+DEBUG 2021-02-07 14:41:57.791 UTC: 	 CRAB Client version: v3.201110
+DEBUG 2021-02-07 14:41:57.791 UTC: 	 Running on: Linux lxplus769.cern.ch 3.10.0-1160.11.1.el7.x86_64 #1 SMP Fri Dec 18 16:34:56 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-02-07 14:41:57.792 UTC: 	 Executing command: 'status'
+DEBUG 2021-02-07 14:41:57.792 UTC: 	 Found CRAB cache file /afs/cern.ch/user/m/mmyllyma/.crab3
+DEBUG 2021-02-07 14:41:57.828 UTC: 	 Checking credentials
+DEBUG 2021-02-07 14:41:57.829 UTC: 	 Found proxy file /tmp/x509up_u104199
+DEBUG 2021-02-07 14:41:57.829 UTC: 	 Getting proxy life time left
+DEBUG 2021-02-07 14:41:58.432 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -timeleft
+ output : 35713
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 14:41:58.937 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -actimeleft
+ output : 35713
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 14:41:58.937 UTC: 	 Proxy valid for 09:55:13 hours
+DEBUG 2021-02-07 14:41:58.997 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+DEBUG 2021-02-07 14:41:59.606 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -identity
+ output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 14:41:59.612 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-02-07 14:41:59.612 UTC: 	 using a3633836dd8d176e9381cc89a8c8629d52861e19 as credential login name
+DEBUG 2021-02-07 14:42:00.316 UTC: 	 Executing : 
+ command : myproxy-info -l a3633836dd8d176e9381cc89a8c8629d52861e19 -s myproxy.cern.ch
+ output : username: a3633836dd8d176e9381cc89a8c8629d52861e19
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 599:16:17  (25.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 14:42:00.317 UTC: 	 Myproxy is valid: 2157377
+DEBUG 2021-02-07 14:42:00.318 UTC: 	 Retrieving username ...
+DEBUG 2021-02-07 14:42:00.318 UTC: 	 Retrieving username from CRIC...
+DEBUG 2021-02-07 14:42:01.111 UTC: 	 username is mmyllyma
+DEBUG 2021-02-07 14:42:01.116 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-02-07 14:42:01.116 UTC: 	 using mmyllyma_CRAB as credential login name
+DEBUG 2021-02-07 14:42:01.721 UTC: 	 Executing : 
+ command : myproxy-info -l mmyllyma_CRAB -s myproxy.cern.ch
+ output : username: mmyllyma_CRAB
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 599:16:24  (25.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 14:42:01.721 UTC: 	 Myproxy is valid: 2157384
+DEBUG 2021-02-07 14:42:01.721 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: a3633836dd8d176e9381cc89a8c8629d52861e19  - validity: 24 days, 23:16:17
+  Credential exists on myproxy: username: mmyllyma_CRAB  - validity: 24 days, 23:16:24
+DEBUG 2021-02-07 14:42:01.722 UTC: 	 Command use: status
+DEBUG 2021-02-07 14:42:01.722 UTC: 	 Options use: ['crab_myAnalysis_K0S_20k']
+DEBUG 2021-02-07 14:42:01.830 UTC: 	 CRABClient version: v3.201110
+DEBUG 2021-02-07 14:42:01.830 UTC: 	 Instance is prod
+DEBUG 2021-02-07 14:42:01.830 UTC: 	 Server base url is cmsweb-k8s-prod.cern.ch
+DEBUG 2021-02-07 14:42:01.830 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2021-02-07 14:42:01.883 UTC: 	 Got information from server oracle database: {u'result': [u'210207_124500:mmyllyma_crab_myAnalysis_K0S_20k', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2021-02-07 12:45:00.211623', u'None', u'2021-02-07 12:45:52.214926', u'None', u'CMSSW_10_4_0', u'slc7_amd64_gcc700', u'/SingleK0S/mmyllyma-step3_K0S_20k-d50b77769ed38983f48189deb3e4f4d3/USER', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'f42a5040c2aae8d03fda7a3a325819b04d5b43f8eeaa40585c0acaf68e1aba3c.tar.gz', u'https://cmsweb.cern.ch:8443/crabcache', u'mmyllyma', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki', u'cms', u'None', u'None', u'crab_myAnalysis_K0S_20k-00000000000000000000000000000000', u'F', u'T2_FI_HIP', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u"['step99_K0S_20k_trees.root']", u'[]', u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2500', u'10', u'None', u'[]', u'http://vocms0122.cern.ch/mon/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov', u'crab3@vocms0122.cern.ch', u'F', u'[]', u'T', u'/store/user/mmyllyma/CRAB3_TransferData', u'F', u'None', u'F', u'None', u'SingleK0S', u'None', u'bb7b14fc6ca647dcd4a99353ab5b6a9aa5abb28f95092f437d70e696100e3c4a.tar.gz', u'66799321', u'filetransfers', u'F', u'188.185.121.184', u'20.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2021-02-07 14:42:01.884 UTC: 	 CRAB project directory:		/afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k
+INFO 2021-02-07 14:42:01.884 UTC: 	 Task name:			210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+INFO 2021-02-07 14:42:01.884 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0122.cern.ch - crab-prod-tw01
+INFO 2021-02-07 14:42:01.884 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2021-02-07 14:42:01.884 UTC: 	 Task URL to use for HELP:	https://cmsweb-k8s-prod.cern.ch/crabserver/ui/task/210207_124500%3Ammyllyma_crab_myAnalysis_K0S_20k
+INFO 2021-02-07 14:42:01.889 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mmyllyma&var-task=210207_124500%3Ammyllyma_crab_myAnalysis_K0S_20k&from=1612698300000&to=now
+INFO 2021-02-07 14:42:01.889 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2021-02-07 14:42:01.889 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 66799321)
+DEBUG 2021-02-07 14:42:01.889 UTC: 	 Webdir is located at http://vocms0122.cern.ch/mon/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+DEBUG 2021-02-07 14:42:01.943 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch:8443/scheddmon/0122/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+DEBUG 2021-02-07 14:42:01.944 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch:8443/scheddmon/0122/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k/status_cache
+DEBUG 2021-02-07 14:42:01.980 UTC: 	 Got information from status cache file: {'11': {'Retries': 0, 'WallDurations': [8.0, 132.27458691596985, 159.0], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799333.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3160], 'TotalUserCpuTimeHistory': [10], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '10': {'Retries': 0, 'WallDurations': [8.0, 132.27458691596985, 159.0], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799337.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [35600], 'TotalUserCpuTimeHistory': [14], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '13': {'Retries': 0, 'WallDurations': [9.0, 133.27458691596985, 160.0], 'StartTimes': [1612702189.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799335.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [44272], 'TotalUserCpuTimeHistory': [10], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '12': {'Retries': 0, 'WallDurations': [10.0, 130.27458691596985, 157.0], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799338.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3156], 'TotalUserCpuTimeHistory': [12], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '15': {'Retries': 0, 'WallDurations': [9.0, 133.27458691596985, 160.0], 'StartTimes': [1612702189.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799334.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [57920], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '14': {'Retries': 0, 'WallDurations': [8.0, 133.27458691596985, 159.0], 'StartTimes': [1612702189.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799336.0'], 'EndTimes': [1612702348.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [68452], 'TotalUserCpuTimeHistory': [12], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [2]}, '17': {'Retries': 0, 'WallDurations': [8.0, 131.27458691596985, 158.0], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799341.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [28224], 'TotalUserCpuTimeHistory': [13], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [2]}, '16': {'Retries': 0, 'WallDurations': [9.0, 131.27458691596985, 157.0], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799340.0'], 'EndTimes': [1612702348.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [44324], 'TotalUserCpuTimeHistory': [10], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '19': {'Retries': 0, 'WallDurations': [9.0, 131.27458691596985, 158.0], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799339.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [47712], 'TotalUserCpuTimeHistory': [11], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '18': {'Retries': 0, 'WallDurations': [8.0, 130.27458691596985, 157.0], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799342.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1892], 'TotalUserCpuTimeHistory': [8], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '1': {'Retries': 0, 'WallDurations': [9.0, 131.27458691596985, 157.0], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701957.0], 'JobIds': ['66799324.0'], 'EndTimes': [1612702348.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3724], 'TotalUserCpuTimeHistory': [13], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [2]}, '3': {'Retries': 0, 'WallDurations': [8.0, 130.27458691596985, 157.0], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799326.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [57544], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '2': {'Retries': 0, 'WallDurations': [8.0, 130.27458691596985, 157.0], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701957.0], 'JobIds': ['66799325.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3152], 'TotalUserCpuTimeHistory': [14], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '5': {'Retries': 0, 'WallDurations': [8.0, 130.27458691596985, 156.0], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799328.0'], 'EndTimes': [1612702348.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3160], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '4': {'Retries': 0, 'WallDurations': [8.0, 127.27458691596985, 154.0], 'StartTimes': [1612702195.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799327.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3164], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '7': {'Retries': 0, 'WallDurations': [9.0, 132.27458691596985, 159.0], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799329.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [48064], 'TotalUserCpuTimeHistory': [11], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '6': {'Retries': 0, 'WallDurations': [8.0, 132.27458691596985, 159.0], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799330.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3160], 'TotalUserCpuTimeHistory': [13], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [2]}, '9': {'Retries': 0, 'WallDurations': [8.0, 132.27458691596985, 159.0], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799332.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [44496], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '20': {'Retries': 0, 'WallDurations': [8.0, 131.27458691596985, 158.0], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799343.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [45328], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '8': {'Retries': 0, 'WallDurations': [9.0, 131.27458691596985, 158.0], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799331.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [40748], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}}
+INFO 2021-02-07 14:42:01.980 UTC: 	 Status on the scheduler:	COMPLETED
+INFO 2021-02-07 14:42:01.980 UTC: 	 
+Jobs status:                    finished     		100.0% (20/20)
+INFO 2021-02-07 14:42:02.024 UTC: 	 
+No publication information available yet
+INFO 2021-02-07 14:42:02.025 UTC: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2021-02-07 14:42:02.025 UTC: 	 
+Warning: the max jobs memory is less than 70% of the task requested value (2500 MB), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2021-02-07 14:42:02.025 UTC: 	 
+Warning: the average jobs CPU efficiency is less than 50%, please consider to improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task
+INFO 2021-02-07 14:42:02.025 UTC: 	 
+Summary of run jobs:
+ * Memory: 3MB min, 66MB max, 29MB ave
+ * Runtime: 0:02:34 min, 0:02:40 max, 0:02:37 ave
+ * CPU eff: 6% min, 10% max, 8% ave
+ * Waste: 0:46:36 (47% of total)
+
+INFO 2021-02-07 14:42:02.035 UTC: 	 Log file is /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/crab.log
+DEBUG 2021-02-07 14:42:28.471 UTC: 	 CRAB Client version: v3.201110
+DEBUG 2021-02-07 14:42:28.471 UTC: 	 Running on: Linux lxplus769.cern.ch 3.10.0-1160.11.1.el7.x86_64 #1 SMP Fri Dec 18 16:34:56 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-02-07 14:42:28.471 UTC: 	 Executing command: 'getoutput'
+DEBUG 2021-02-07 14:42:28.471 UTC: 	 Found CRAB cache file /afs/cern.ch/user/m/mmyllyma/.crab3
+DEBUG 2021-02-07 14:42:28.473 UTC: 	 Using VO group '' and VO role 'NULL' as written in the request cache file for this task.
+DEBUG 2021-02-07 14:42:28.582 UTC: 	 Checking credentials
+DEBUG 2021-02-07 14:42:28.583 UTC: 	 Found proxy file /tmp/x509up_u104199
+DEBUG 2021-02-07 14:42:28.583 UTC: 	 Getting proxy life time left
+DEBUG 2021-02-07 14:42:29.089 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -timeleft
+ output : 35682
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 14:42:29.593 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -actimeleft
+ output : 35682
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 14:42:29.593 UTC: 	 Proxy valid for 09:54:42 hours
+DEBUG 2021-02-07 14:42:30.098 UTC: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u104199 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 14:42:30.147 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+DEBUG 2021-02-07 14:42:30.759 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -identity
+ output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 14:42:30.765 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-02-07 14:42:30.765 UTC: 	 using a3633836dd8d176e9381cc89a8c8629d52861e19 as credential login name
+DEBUG 2021-02-07 14:42:31.069 UTC: 	 Executing : 
+ command : myproxy-info -l a3633836dd8d176e9381cc89a8c8629d52861e19 -s myproxy.cern.ch
+ output : username: a3633836dd8d176e9381cc89a8c8629d52861e19
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 599:15:46  (25.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 14:42:31.070 UTC: 	 Myproxy is valid: 2157346
+DEBUG 2021-02-07 14:42:31.070 UTC: 	 Retrieving username ...
+DEBUG 2021-02-07 14:42:31.070 UTC: 	 Retrieving username from CRIC...
+DEBUG 2021-02-07 14:42:31.755 UTC: 	 username is mmyllyma
+DEBUG 2021-02-07 14:42:31.760 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-02-07 14:42:31.760 UTC: 	 using mmyllyma_CRAB as credential login name
+DEBUG 2021-02-07 14:42:32.064 UTC: 	 Executing : 
+ command : myproxy-info -l mmyllyma_CRAB -s myproxy.cern.ch
+ output : username: mmyllyma_CRAB
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 599:15:53  (25.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 14:42:32.064 UTC: 	 Myproxy is valid: 2157353
+DEBUG 2021-02-07 14:42:32.064 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: a3633836dd8d176e9381cc89a8c8629d52861e19  - validity: 24 days, 23:15:46
+  Credential exists on myproxy: username: mmyllyma_CRAB  - validity: 24 days, 23:15:53
+DEBUG 2021-02-07 14:42:32.065 UTC: 	 Command use: getoutput
+DEBUG 2021-02-07 14:42:32.065 UTC: 	 Options use: ['crab_myAnalysis_K0S_20k']
+DEBUG 2021-02-07 14:42:32.124 UTC: 	 CRABClient version: v3.201110
+DEBUG 2021-02-07 14:42:32.124 UTC: 	 Instance is prod
+DEBUG 2021-02-07 14:42:32.124 UTC: 	 Server base url is cmsweb-k8s-prod.cern.ch
+DEBUG 2021-02-07 14:42:32.124 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2021-02-07 14:42:32.251 UTC: 	 Server result: {u'result': [u'210207_124500:mmyllyma_crab_myAnalysis_K0S_20k', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2021-02-07 12:45:00.211623', u'None', u'2021-02-07 12:45:52.214926', u'None', u'CMSSW_10_4_0', u'slc7_amd64_gcc700', u'/SingleK0S/mmyllyma-step3_K0S_20k-d50b77769ed38983f48189deb3e4f4d3/USER', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'f42a5040c2aae8d03fda7a3a325819b04d5b43f8eeaa40585c0acaf68e1aba3c.tar.gz', u'https://cmsweb.cern.ch:8443/crabcache', u'mmyllyma', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki', u'cms', u'None', u'None', u'crab_myAnalysis_K0S_20k-00000000000000000000000000000000', u'F', u'T2_FI_HIP', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u"['step99_K0S_20k_trees.root']", u'[]', u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2500', u'10', u'None', u'[]', u'http://vocms0122.cern.ch/mon/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov', u'crab3@vocms0122.cern.ch', u'F', u'[]', u'T', u'/store/user/mmyllyma/CRAB3_TransferData', u'F', u'None', u'F', u'None', u'SingleK0S', u'None', u'bb7b14fc6ca647dcd4a99353ab5b6a9aa5abb28f95092f437d70e696100e3c4a.tar.gz', u'66799321', u'filetransfers', u'F', u'188.185.121.184', u'20.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+DEBUG 2021-02-07 14:42:32.260 UTC: 	 CRAB Client version: v3.201110
+DEBUG 2021-02-07 14:42:32.260 UTC: 	 Running on: Linux lxplus769.cern.ch 3.10.0-1160.11.1.el7.x86_64 #1 SMP Fri Dec 18 16:34:56 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-02-07 14:42:32.260 UTC: 	 Executing command: 'status'
+DEBUG 2021-02-07 14:42:32.261 UTC: 	 Found CRAB cache file /afs/cern.ch/user/m/mmyllyma/.crab3
+DEBUG 2021-02-07 14:42:32.367 UTC: 	 Checking credentials
+DEBUG 2021-02-07 14:42:32.367 UTC: 	 Found proxy file /tmp/x509up_u104199
+DEBUG 2021-02-07 14:42:32.367 UTC: 	 Getting proxy life time left
+DEBUG 2021-02-07 14:42:32.873 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -timeleft
+ output : 35679
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 14:42:33.378 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -actimeleft
+ output : 35678
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 14:42:33.379 UTC: 	 Proxy lifetime 35679 secs is different from voms extension lifetime 35678 secs for proxy: /tmp/x509up_u104199
+DEBUG 2021-02-07 14:42:33.379 UTC: 	 Proxy valid for 09:54:38 hours
+DEBUG 2021-02-07 14:42:33.482 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+DEBUG 2021-02-07 14:42:34.091 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u104199 -identity
+ output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 14:42:34.098 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-02-07 14:42:34.098 UTC: 	 using a3633836dd8d176e9381cc89a8c8629d52861e19 as credential login name
+DEBUG 2021-02-07 14:42:34.402 UTC: 	 Executing : 
+ command : myproxy-info -l a3633836dd8d176e9381cc89a8c8629d52861e19 -s myproxy.cern.ch
+ output : username: a3633836dd8d176e9381cc89a8c8629d52861e19
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 599:15:43  (25.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 14:42:34.403 UTC: 	 Myproxy is valid: 2157343
+DEBUG 2021-02-07 14:42:34.403 UTC: 	 Retrieving username ...
+DEBUG 2021-02-07 14:42:34.403 UTC: 	 Retrieving username from CRIC...
+DEBUG 2021-02-07 14:42:35.461 UTC: 	 username is mmyllyma
+DEBUG 2021-02-07 14:42:35.467 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-02-07 14:42:35.467 UTC: 	 using mmyllyma_CRAB as credential login name
+DEBUG 2021-02-07 14:42:35.771 UTC: 	 Executing : 
+ command : myproxy-info -l mmyllyma_CRAB -s myproxy.cern.ch
+ output : username: mmyllyma_CRAB
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 599:15:50  (25.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-07 14:42:35.771 UTC: 	 Myproxy is valid: 2157350
+DEBUG 2021-02-07 14:42:35.771 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: a3633836dd8d176e9381cc89a8c8629d52861e19  - validity: 24 days, 23:15:43
+  Credential exists on myproxy: username: mmyllyma_CRAB  - validity: 24 days, 23:15:50
+DEBUG 2021-02-07 14:42:35.772 UTC: 	 Command use: status
+DEBUG 2021-02-07 14:42:35.772 UTC: 	 Options use: []
+DEBUG 2021-02-07 14:42:35.853 UTC: 	 CRABClient version: v3.201110
+DEBUG 2021-02-07 14:42:35.853 UTC: 	 Instance is prod
+DEBUG 2021-02-07 14:42:35.853 UTC: 	 Server base url is cmsweb-k8s-prod.cern.ch
+DEBUG 2021-02-07 14:42:35.853 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2021-02-07 14:42:35.900 UTC: 	 Got information from server oracle database: {u'result': [u'210207_124500:mmyllyma_crab_myAnalysis_K0S_20k', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2021-02-07 12:45:00.211623', u'None', u'2021-02-07 12:45:52.214926', u'None', u'CMSSW_10_4_0', u'slc7_amd64_gcc700', u'/SingleK0S/mmyllyma-step3_K0S_20k-d50b77769ed38983f48189deb3e4f4d3/USER', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'f42a5040c2aae8d03fda7a3a325819b04d5b43f8eeaa40585c0acaf68e1aba3c.tar.gz', u'https://cmsweb.cern.ch:8443/crabcache', u'mmyllyma', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=mmyllyma/CN=821759/CN=Mikael Myllymaki', u'cms', u'None', u'None', u'crab_myAnalysis_K0S_20k-00000000000000000000000000000000', u'F', u'T2_FI_HIP', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u"['step99_K0S_20k_trees.root']", u'[]', u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2500', u'10', u'None', u'[]', u'http://vocms0122.cern.ch/mon/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov', u'crab3@vocms0122.cern.ch', u'F', u'[]', u'T', u'/store/user/mmyllyma/CRAB3_TransferData', u'F', u'None', u'F', u'None', u'SingleK0S', u'None', u'bb7b14fc6ca647dcd4a99353ab5b6a9aa5abb28f95092f437d70e696100e3c4a.tar.gz', u'66799321', u'filetransfers', u'F', u'188.185.121.184', u'20.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2021-02-07 14:42:35.900 UTC: 	 CRAB project directory:		/afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k
+INFO 2021-02-07 14:42:35.900 UTC: 	 Task name:			210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+INFO 2021-02-07 14:42:35.900 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0122.cern.ch - crab-prod-tw01
+INFO 2021-02-07 14:42:35.900 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2021-02-07 14:42:35.900 UTC: 	 Task URL to use for HELP:	https://cmsweb-k8s-prod.cern.ch/crabserver/ui/task/210207_124500%3Ammyllyma_crab_myAnalysis_K0S_20k
+INFO 2021-02-07 14:42:35.904 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=mmyllyma&var-task=210207_124500%3Ammyllyma_crab_myAnalysis_K0S_20k&from=1612698300000&to=now
+INFO 2021-02-07 14:42:35.904 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2021-02-07 14:42:35.904 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 66799321)
+DEBUG 2021-02-07 14:42:35.904 UTC: 	 Webdir is located at http://vocms0122.cern.ch/mon/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+DEBUG 2021-02-07 14:42:35.965 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch:8443/scheddmon/0122/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+DEBUG 2021-02-07 14:42:35.965 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch:8443/scheddmon/0122/cms1254/210207_124500:mmyllyma_crab_myAnalysis_K0S_20k/status_cache
+DEBUG 2021-02-07 14:42:36.000 UTC: 	 Got information from status cache file: {'11': {'Retries': 0, 'WallDurations': [8.0, 132.27458691596985, 159.0], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799333.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3160], 'TotalUserCpuTimeHistory': [10], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '10': {'Retries': 0, 'WallDurations': [8.0, 132.27458691596985, 159.0], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799337.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [35600], 'TotalUserCpuTimeHistory': [14], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '13': {'Retries': 0, 'WallDurations': [9.0, 133.27458691596985, 160.0], 'StartTimes': [1612702189.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799335.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [44272], 'TotalUserCpuTimeHistory': [10], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '12': {'Retries': 0, 'WallDurations': [10.0, 130.27458691596985, 157.0], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799338.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3156], 'TotalUserCpuTimeHistory': [12], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '15': {'Retries': 0, 'WallDurations': [9.0, 133.27458691596985, 160.0], 'StartTimes': [1612702189.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799334.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [57920], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '14': {'Retries': 0, 'WallDurations': [8.0, 133.27458691596985, 159.0], 'StartTimes': [1612702189.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799336.0'], 'EndTimes': [1612702348.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [68452], 'TotalUserCpuTimeHistory': [12], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [2]}, '17': {'Retries': 0, 'WallDurations': [8.0, 131.27458691596985, 158.0], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799341.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [28224], 'TotalUserCpuTimeHistory': [13], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [2]}, '16': {'Retries': 0, 'WallDurations': [9.0, 131.27458691596985, 157.0], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799340.0'], 'EndTimes': [1612702348.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [44324], 'TotalUserCpuTimeHistory': [10], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '19': {'Retries': 0, 'WallDurations': [9.0, 131.27458691596985, 158.0], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799339.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [47712], 'TotalUserCpuTimeHistory': [11], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '18': {'Retries': 0, 'WallDurations': [8.0, 130.27458691596985, 157.0], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799342.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1892], 'TotalUserCpuTimeHistory': [8], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '1': {'Retries': 0, 'WallDurations': [9.0, 131.27458691596985, 157.0], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701957.0], 'JobIds': ['66799324.0'], 'EndTimes': [1612702348.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3724], 'TotalUserCpuTimeHistory': [13], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [2]}, '3': {'Retries': 0, 'WallDurations': [8.0, 130.27458691596985, 157.0], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799326.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [57544], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '2': {'Retries': 0, 'WallDurations': [8.0, 130.27458691596985, 157.0], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701957.0], 'JobIds': ['66799325.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3152], 'TotalUserCpuTimeHistory': [14], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '5': {'Retries': 0, 'WallDurations': [8.0, 130.27458691596985, 156.0], 'StartTimes': [1612702192.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799328.0'], 'EndTimes': [1612702348.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3160], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '4': {'Retries': 0, 'WallDurations': [8.0, 127.27458691596985, 154.0], 'StartTimes': [1612702195.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799327.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3164], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '7': {'Retries': 0, 'WallDurations': [9.0, 132.27458691596985, 159.0], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799329.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [48064], 'TotalUserCpuTimeHistory': [11], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '6': {'Retries': 0, 'WallDurations': [8.0, 132.27458691596985, 159.0], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799330.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [3160], 'TotalUserCpuTimeHistory': [13], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [2]}, '9': {'Retries': 0, 'WallDurations': [8.0, 132.27458691596985, 159.0], 'StartTimes': [1612702190.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799332.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [44496], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '20': {'Retries': 0, 'WallDurations': [8.0, 131.27458691596985, 158.0], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701959.0], 'JobIds': ['66799343.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [45328], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}, '8': {'Retries': 0, 'WallDurations': [9.0, 131.27458691596985, 158.0], 'StartTimes': [1612702191.0], 'SubmitTimes': [1612701958.0], 'JobIds': ['66799331.0'], 'EndTimes': [1612702349.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [40748], 'TotalUserCpuTimeHistory': [9], 'SiteHistory': ['Unknown', 'T2_FI_HIP', 'T2_FI_HIP'], 'TotalSysCpuTimeHistory': [1]}}
+INFO 2021-02-07 14:42:36.000 UTC: 	 Status on the scheduler:	COMPLETED
+INFO 2021-02-07 14:42:36.001 UTC: 	 
+Jobs status:                    finished     		100.0% (20/20)
+INFO 2021-02-07 14:42:36.077 UTC: 	 
+No publication information available yet
+INFO 2021-02-07 14:42:36.077 UTC: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2021-02-07 14:42:36.077 UTC: 	 
+Warning: the max jobs memory is less than 70% of the task requested value (2500 MB), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2021-02-07 14:42:36.077 UTC: 	 
+Warning: the average jobs CPU efficiency is less than 50%, please consider to improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task
+INFO 2021-02-07 14:42:36.078 UTC: 	 
+Summary of run jobs:
+ * Memory: 3MB min, 66MB max, 29MB ave
+ * Runtime: 0:02:34 min, 0:02:40 max, 0:02:37 ave
+ * CPU eff: 6% min, 10% max, 8% ave
+ * Waste: 0:46:36 (47% of total)
+
+DEBUG 2021-02-07 14:42:36.078 UTC: 	 Retrieving locations for task 210207_124500:mmyllyma_crab_myAnalysis_K0S_20k
+DEBUG 2021-02-07 14:42:36.078 UTC: 	 Retrieving all file locations
+DEBUG 2021-02-07 14:42:36.078 UTC: 	 Retrieving jobs [('jobids', '11'), ('jobids', '10'), ('jobids', '13'), ('jobids', '12'), ('jobids', '15'), ('jobids', '14'), ('jobids', '17'), ('jobids', '16'), ('jobids', '19'), ('jobids', '18'), ('jobids', '1'), ('jobids', '3'), ('jobids', '2'), ('jobids', '5'), ('jobids', '4'), ('jobids', '7'), ('jobids', '6'), ('jobids', '9'), ('jobids', '20'), ('jobids', '8')]
+DEBUG 2021-02-07 14:42:36.195 UTC: 	 Server result: {u'result': [{u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_12.root', u'site': u'T2_FI_HIP', u'jobid': u'12', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_12.root', u'size': 61516, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_4.root', u'site': u'T2_FI_HIP', u'jobid': u'4', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_4.root', u'size': 61415, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_18.root', u'site': u'T2_FI_HIP', u'jobid': u'18', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_18.root', u'size': 61729, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_11.root', u'site': u'T2_FI_HIP', u'jobid': u'11', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_11.root', u'size': 61616, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_20.root', u'site': u'T2_FI_HIP', u'jobid': u'20', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_20.root', u'size': 61501, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_10.root', u'site': u'T2_FI_HIP', u'jobid': u'10', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_10.root', u'size': 61715, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_13.root', u'site': u'T2_FI_HIP', u'jobid': u'13', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_13.root', u'size': 61489, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_9.root', u'site': u'T2_FI_HIP', u'jobid': u'9', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_9.root', u'size': 61559, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_17.root', u'site': u'T2_FI_HIP', u'jobid': u'17', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_17.root', u'size': 61610, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_2.root', u'site': u'T2_FI_HIP', u'jobid': u'2', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_2.root', u'size': 61519, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_3.root', u'site': u'T2_FI_HIP', u'jobid': u'3', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_3.root', u'size': 61477, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_8.root', u'site': u'T2_FI_HIP', u'jobid': u'8', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_8.root', u'size': 61525, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_15.root', u'site': u'T2_FI_HIP', u'jobid': u'15', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_15.root', u'size': 61512, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_7.root', u'site': u'T2_FI_HIP', u'jobid': u'7', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_7.root', u'size': 61547, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_19.root', u'site': u'T2_FI_HIP', u'jobid': u'19', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_19.root', u'size': 61548, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_6.root', u'site': u'T2_FI_HIP', u'jobid': u'6', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_6.root', u'size': 61372, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_14.root', u'site': u'T2_FI_HIP', u'jobid': u'14', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_14.root', u'size': 61608, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_5.root', u'site': u'T2_FI_HIP', u'jobid': u'5', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_5.root', u'size': 61628, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_1.root', u'site': u'T2_FI_HIP', u'jobid': u'1', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_1.root', u'size': 61402, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_16.root', u'site': u'T2_FI_HIP', u'jobid': u'16', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_16.root', u'size': 61423, u'directstageout': u'T'}]}
+INFO 2021-02-07 14:42:36.196 UTC: 	 Setting the destination to /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results 
+INFO 2021-02-07 14:42:36.197 UTC: 	 Retrieving 20 files
+DEBUG 2021-02-07 14:42:36.206 UTC: 	 CRAB Client version: v3.201110
+DEBUG 2021-02-07 14:42:36.206 UTC: 	 Running on: Linux lxplus769.cern.ch 3.10.0-1160.11.1.el7.x86_64 #1 SMP Fri Dec 18 16:34:56 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-02-07 14:42:36.206 UTC: 	 Executing command: 'remote_copy'
+DEBUG 2021-02-07 14:42:36.206 UTC: 	 Found CRAB cache file /afs/cern.ch/user/m/mmyllyma/.crab3
+DEBUG 2021-02-07 14:42:36.355 UTC: 	 Skipping proxy creation
+DEBUG 2021-02-07 14:42:36.356 UTC: 	 Command use: remote_copy
+DEBUG 2021-02-07 14:42:36.356 UTC: 	 Options use: ['--destination', '/afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results', '--input', [{u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_12.root', u'site': u'T2_FI_HIP', u'jobid': u'12', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_12.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_12.root', u'size': 61516, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_4.root', u'site': u'T2_FI_HIP', u'jobid': u'4', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_4.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_4.root', u'size': 61415, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_18.root', u'site': u'T2_FI_HIP', u'jobid': u'18', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_18.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_18.root', u'size': 61729, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_11.root', u'site': u'T2_FI_HIP', u'jobid': u'11', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_11.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_11.root', u'size': 61616, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_20.root', u'site': u'T2_FI_HIP', u'jobid': u'20', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_20.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_20.root', u'size': 61501, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_10.root', u'site': u'T2_FI_HIP', u'jobid': u'10', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_10.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_10.root', u'size': 61715, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_13.root', u'site': u'T2_FI_HIP', u'jobid': u'13', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_13.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_13.root', u'size': 61489, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_9.root', u'site': u'T2_FI_HIP', u'jobid': u'9', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_9.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_9.root', u'size': 61559, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_17.root', u'site': u'T2_FI_HIP', u'jobid': u'17', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_17.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_17.root', u'size': 61610, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_2.root', u'site': u'T2_FI_HIP', u'jobid': u'2', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_2.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_2.root', u'size': 61519, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_3.root', u'site': u'T2_FI_HIP', u'jobid': u'3', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_3.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_3.root', u'size': 61477, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_8.root', u'site': u'T2_FI_HIP', u'jobid': u'8', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_8.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_8.root', u'size': 61525, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_15.root', u'site': u'T2_FI_HIP', u'jobid': u'15', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_15.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_15.root', u'size': 61512, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_7.root', u'site': u'T2_FI_HIP', u'jobid': u'7', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_7.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_7.root', u'size': 61547, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_19.root', u'site': u'T2_FI_HIP', u'jobid': u'19', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_19.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_19.root', u'size': 61548, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_6.root', u'site': u'T2_FI_HIP', u'jobid': u'6', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_6.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_6.root', u'size': 61372, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_14.root', u'site': u'T2_FI_HIP', u'jobid': u'14', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_14.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_14.root', u'size': 61608, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_5.root', u'site': u'T2_FI_HIP', u'jobid': u'5', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_5.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_5.root', u'size': 61628, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_1.root', u'site': u'T2_FI_HIP', u'jobid': u'1', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_1.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_1.root', u'size': 61402, u'directstageout': u'T'}, {u'tmpsite': u'T2_FI_HIP', u'checksum': {u'adler32': u'0', u'cksum': 0, u'md5': u'0'}, u'lfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_16.root', u'site': u'T2_FI_HIP', u'jobid': u'16', 'pfn': u'root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_16.root', u'tmplfn': u'/store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_16.root', u'size': 61423, u'directstageout': u'T'}], '--dir', 'crab_myAnalysis_K0S_20k', '--proxy', '/tmp/x509up_u104199', '--parallel', None, '--wait', None, '--checksum', 'ADLER32', '--command', None]
+DEBUG 2021-02-07 14:42:36.429 UTC: 	 CRABClient version: v3.201110
+DEBUG 2021-02-07 14:42:36.429 UTC: 	 Instance is prod
+DEBUG 2021-02-07 14:42:36.429 UTC: 	 Server base url is cmsweb-k8s-prod.cern.ch
+DEBUG 2021-02-07 14:42:36.429 UTC: 	 Command url /crabserver/prod/workflow
+INFO 2021-02-07 14:42:36.433 UTC: 	 Will use `gfal-copy` command for file transfers
+DEBUG 2021-02-07 14:42:36.458 UTC: 	 Starting ChildProcess with 10 ChildProcess
+INFO 2021-02-07 14:42:36.477 UTC: 	 Placing file 'step99_K0S_20k_trees_12.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.485 UTC: 	 Placing file 'step99_K0S_20k_trees_4.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.491 UTC: 	 Placing file 'step99_K0S_20k_trees_18.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.500 UTC: 	 Placing file 'step99_K0S_20k_trees_11.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.504 UTC: 	 Placing file 'step99_K0S_20k_trees_20.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.509 UTC: 	 Placing file 'step99_K0S_20k_trees_10.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.518 UTC: 	 Placing file 'step99_K0S_20k_trees_13.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.524 UTC: 	 Placing file 'step99_K0S_20k_trees_9.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.535 UTC: 	 Placing file 'step99_K0S_20k_trees_17.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.541 UTC: 	 Placing file 'step99_K0S_20k_trees_2.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.547 UTC: 	 Placing file 'step99_K0S_20k_trees_3.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.563 UTC: 	 Placing file 'step99_K0S_20k_trees_8.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.580 UTC: 	 Placing file 'step99_K0S_20k_trees_15.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.585 UTC: 	 Placing file 'step99_K0S_20k_trees_7.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.594 UTC: 	 Placing file 'step99_K0S_20k_trees_19.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.606 UTC: 	 Placing file 'step99_K0S_20k_trees_6.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.614 UTC: 	 Placing file 'step99_K0S_20k_trees_14.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.626 UTC: 	 Placing file 'step99_K0S_20k_trees_5.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.638 UTC: 	 Placing file 'step99_K0S_20k_trees_1.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.652 UTC: 	 Placing file 'step99_K0S_20k_trees_16.root' in retrieval queue 
+INFO 2021-02-07 14:42:36.653 UTC: 	 Please wait
+DEBUG 2021-02-07 14:42:36.653 UTC: 	 stopchildproc() method has been called
+DEBUG 2021-02-07 14:44:44.426 UTC: 	 The output of the transfer subprocesses follows:
+DEBUG 2021-02-07 14:44:44.426 UTC: 	 	INFO 2021-02-07 15:42:36,479: 	 Retrieving step99_K0S_20k_trees_12.root 
+DEBUG 2021-02-07 14:44:44.426 UTC: 	 	DEBUG 2021-02-07 15:42:36,481: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_12.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_12.root
+DEBUG 2021-02-07 14:44:44.426 UTC: 	 	INFO 2021-02-07 15:42:36,487: 	 Retrieving step99_K0S_20k_trees_4.root 
+DEBUG 2021-02-07 14:44:44.426 UTC: 	 	DEBUG 2021-02-07 15:42:36,487: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_4.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_4.root
+DEBUG 2021-02-07 14:44:44.426 UTC: 	 	INFO 2021-02-07 15:42:36,492: 	 Retrieving step99_K0S_20k_trees_18.root 
+DEBUG 2021-02-07 14:44:44.426 UTC: 	 	DEBUG 2021-02-07 15:42:36,492: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_18.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_18.root
+DEBUG 2021-02-07 14:44:44.426 UTC: 	 	INFO 2021-02-07 15:42:36,502: 	 Retrieving step99_K0S_20k_trees_11.root 
+DEBUG 2021-02-07 14:44:44.426 UTC: 	 	DEBUG 2021-02-07 15:42:36,502: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_11.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_11.root
+DEBUG 2021-02-07 14:44:44.426 UTC: 	 	INFO 2021-02-07 15:42:36,510: 	 Retrieving step99_K0S_20k_trees_20.root 
+DEBUG 2021-02-07 14:44:44.426 UTC: 	 	INFO 2021-02-07 15:42:36,513: 	 Retrieving step99_K0S_20k_trees_10.root 
+DEBUG 2021-02-07 14:44:44.426 UTC: 	 	DEBUG 2021-02-07 15:42:36,514: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_10.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_10.root
+DEBUG 2021-02-07 14:44:44.426 UTC: 	 	DEBUG 2021-02-07 15:42:36,510: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_20.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_20.root
+DEBUG 2021-02-07 14:44:44.426 UTC: 	 	INFO 2021-02-07 15:42:36,522: 	 Retrieving step99_K0S_20k_trees_13.root 
+DEBUG 2021-02-07 14:44:44.426 UTC: 	 	DEBUG 2021-02-07 15:42:36,522: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_13.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_13.root
+DEBUG 2021-02-07 14:44:44.426 UTC: 	 	INFO 2021-02-07 15:42:36,531: 	 Retrieving step99_K0S_20k_trees_9.root 
+DEBUG 2021-02-07 14:44:44.426 UTC: 	 	DEBUG 2021-02-07 15:42:36,532: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_9.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_9.root
+DEBUG 2021-02-07 14:44:44.426 UTC: 	 	INFO 2021-02-07 15:42:36,540: 	 Retrieving step99_K0S_20k_trees_17.root 
+DEBUG 2021-02-07 14:44:44.426 UTC: 	 	DEBUG 2021-02-07 15:42:36,541: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_17.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_17.root
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	INFO 2021-02-07 15:42:36,543: 	 Retrieving step99_K0S_20k_trees_2.root 
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	DEBUG 2021-02-07 15:42:36,543: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_2.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_2.root
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	DEBUG 2021-02-07 15:42:40,283: 	 Finish executing for file step99_K0S_20k_trees_9.root
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	INFO 2021-02-07 15:42:40,283: 	 Warning: Failed retrieving step99_K0S_20k_trees_9.root
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	INFO 2021-02-07 15:42:40,283: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	DEBUG 2021-02-07 15:42:40,285: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	DEBUG 2021-02-07 15:42:40,298: 	 Finish executing for file step99_K0S_20k_trees_20.root
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	INFO 2021-02-07 15:42:40,298: 	 Warning: Failed retrieving step99_K0S_20k_trees_20.root
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	INFO 2021-02-07 15:42:40,298: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	DEBUG 2021-02-07 15:42:40,300: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	DEBUG 2021-02-07 15:42:40,301: 	 Finish executing for file step99_K0S_20k_trees_13.root
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	INFO 2021-02-07 15:42:40,302: 	 Warning: Failed retrieving step99_K0S_20k_trees_13.root
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	INFO 2021-02-07 15:42:40,302: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	DEBUG 2021-02-07 15:42:40,303: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	DEBUG 2021-02-07 15:42:40,341: 	 Finish executing for file step99_K0S_20k_trees_11.root
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	INFO 2021-02-07 15:42:40,341: 	 Warning: Failed retrieving step99_K0S_20k_trees_11.root
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	INFO 2021-02-07 15:42:40,341: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	DEBUG 2021-02-07 15:42:40,342: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	DEBUG 2021-02-07 15:42:40,447: 	 Finish executing for file step99_K0S_20k_trees_12.root
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	INFO 2021-02-07 15:42:40,448: 	 Warning: Failed retrieving step99_K0S_20k_trees_12.root
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	INFO 2021-02-07 15:42:40,448: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	DEBUG 2021-02-07 15:42:40,450: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	DEBUG 2021-02-07 15:42:40,492: 	 Finish executing for file step99_K0S_20k_trees_17.root
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	INFO 2021-02-07 15:42:40,492: 	 Warning: Failed retrieving step99_K0S_20k_trees_17.root
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	INFO 2021-02-07 15:42:40,492: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	DEBUG 2021-02-07 15:42:40,494: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	DEBUG 2021-02-07 15:42:40,558: 	 Finish executing for file step99_K0S_20k_trees_18.root
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	INFO 2021-02-07 15:42:40,558: 	 Warning: Failed retrieving step99_K0S_20k_trees_18.root
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	INFO 2021-02-07 15:42:40,559: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	DEBUG 2021-02-07 15:42:40,560: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.427 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	DEBUG 2021-02-07 15:42:40,635: 	 Finish executing for file step99_K0S_20k_trees_2.root
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	INFO 2021-02-07 15:42:40,636: 	 Warning: Failed retrieving step99_K0S_20k_trees_2.root
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	INFO 2021-02-07 15:42:40,636: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	DEBUG 2021-02-07 15:42:40,637: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	DEBUG 2021-02-07 15:42:40,656: 	 Finish executing for file step99_K0S_20k_trees_4.root
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	INFO 2021-02-07 15:42:40,657: 	 Warning: Failed retrieving step99_K0S_20k_trees_4.root
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	INFO 2021-02-07 15:42:40,657: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	DEBUG 2021-02-07 15:42:40,658: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	DEBUG 2021-02-07 15:42:40,749: 	 Finish executing for file step99_K0S_20k_trees_10.root
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	INFO 2021-02-07 15:42:40,749: 	 Warning: Failed retrieving step99_K0S_20k_trees_10.root
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	INFO 2021-02-07 15:42:40,749: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	DEBUG 2021-02-07 15:42:40,751: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	INFO 2021-02-07 15:43:40,291: 	 Retrieving step99_K0S_20k_trees_3.root 
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	DEBUG 2021-02-07 15:43:40,292: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_3.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_3.root
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	INFO 2021-02-07 15:43:40,360: 	 Retrieving step99_K0S_20k_trees_8.root 
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	DEBUG 2021-02-07 15:43:40,361: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_8.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_8.root
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	INFO 2021-02-07 15:43:40,361: 	 Retrieving step99_K0S_20k_trees_15.root 
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	DEBUG 2021-02-07 15:43:40,361: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_15.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_15.root
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	INFO 2021-02-07 15:43:40,403: 	 Retrieving step99_K0S_20k_trees_7.root 
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	DEBUG 2021-02-07 15:43:40,403: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_7.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_7.root
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	INFO 2021-02-07 15:43:40,510: 	 Retrieving step99_K0S_20k_trees_19.root 
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	DEBUG 2021-02-07 15:43:40,510: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_19.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_19.root
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	INFO 2021-02-07 15:43:40,554: 	 Retrieving step99_K0S_20k_trees_6.root 
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	DEBUG 2021-02-07 15:43:40,554: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_6.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_6.root
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	INFO 2021-02-07 15:43:40,620: 	 Retrieving step99_K0S_20k_trees_14.root 
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	DEBUG 2021-02-07 15:43:40,621: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_14.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_14.root
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	INFO 2021-02-07 15:43:40,684: 	 Retrieving step99_K0S_20k_trees_5.root 
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	DEBUG 2021-02-07 15:43:40,684: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_5.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_5.root
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	INFO 2021-02-07 15:43:40,684: 	 Retrieving step99_K0S_20k_trees_1.root 
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	DEBUG 2021-02-07 15:43:40,684: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_1.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_1.root
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	INFO 2021-02-07 15:43:40,812: 	 Retrieving step99_K0S_20k_trees_16.root 
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	DEBUG 2021-02-07 15:43:40,813: 	 Executing which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -v -K ADLER32  -T 1800  -t 60  root://cms-xrd-global.cern.ch//store/user/mmyllyma/CRAB3_TransferData/SingleK0S/crab_myAnalysis_K0S_20k/210207_124500/0000/step99_K0S_20k_trees_16.root file:///afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/results/step99_K0S_20k_trees_16.root
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	DEBUG 2021-02-07 15:43:43,341: 	 Finish executing for file step99_K0S_20k_trees_7.root
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	INFO 2021-02-07 15:43:43,342: 	 Warning: Failed retrieving step99_K0S_20k_trees_7.root
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	INFO 2021-02-07 15:43:43,342: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	DEBUG 2021-02-07 15:43:43,342: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.428 UTC: 	 	
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	DEBUG 2021-02-07 15:43:43,444: 	 Finish executing for file step99_K0S_20k_trees_3.root
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	INFO 2021-02-07 15:43:43,444: 	 Warning: Failed retrieving step99_K0S_20k_trees_3.root
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	INFO 2021-02-07 15:43:43,444: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	DEBUG 2021-02-07 15:43:43,445: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	DEBUG 2021-02-07 15:43:43,648: 	 Finish executing for file step99_K0S_20k_trees_16.root
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	INFO 2021-02-07 15:43:43,648: 	 Warning: Failed retrieving step99_K0S_20k_trees_16.root
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	INFO 2021-02-07 15:43:43,648: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	DEBUG 2021-02-07 15:43:43,648: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	DEBUG 2021-02-07 15:43:43,700: 	 Finish executing for file step99_K0S_20k_trees_15.root
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	INFO 2021-02-07 15:43:43,700: 	 Warning: Failed retrieving step99_K0S_20k_trees_15.root
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	INFO 2021-02-07 15:43:43,700: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	DEBUG 2021-02-07 15:43:43,701: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	DEBUG 2021-02-07 15:43:43,800: 	 Finish executing for file step99_K0S_20k_trees_8.root
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	INFO 2021-02-07 15:43:43,801: 	 Warning: Failed retrieving step99_K0S_20k_trees_8.root
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	INFO 2021-02-07 15:43:43,801: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	DEBUG 2021-02-07 15:43:43,801: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	DEBUG 2021-02-07 15:43:43,895: 	 Finish executing for file step99_K0S_20k_trees_6.root
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	INFO 2021-02-07 15:43:43,896: 	 Warning: Failed retrieving step99_K0S_20k_trees_6.root
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	INFO 2021-02-07 15:43:43,896: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	DEBUG 2021-02-07 15:43:43,896: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	DEBUG 2021-02-07 15:43:43,903: 	 Finish executing for file step99_K0S_20k_trees_19.root
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	INFO 2021-02-07 15:43:43,903: 	 Warning: Failed retrieving step99_K0S_20k_trees_19.root
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	INFO 2021-02-07 15:43:43,903: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	DEBUG 2021-02-07 15:43:43,904: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	DEBUG 2021-02-07 15:43:43,929: 	 Finish executing for file step99_K0S_20k_trees_5.root
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	INFO 2021-02-07 15:43:43,930: 	 Warning: Failed retrieving step99_K0S_20k_trees_5.root
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	INFO 2021-02-07 15:43:43,930: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	DEBUG 2021-02-07 15:43:43,930: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	DEBUG 2021-02-07 15:43:44,122: 	 Finish executing for file step99_K0S_20k_trees_1.root
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	INFO 2021-02-07 15:43:44,122: 	 Warning: Failed retrieving step99_K0S_20k_trees_1.root
+DEBUG 2021-02-07 14:44:44.429 UTC: 	 	INFO 2021-02-07 15:43:44,122: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.430 UTC: 	 	DEBUG 2021-02-07 15:43:44,122: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.430 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.430 UTC: 	 	
+DEBUG 2021-02-07 14:44:44.430 UTC: 	 	DEBUG 2021-02-07 15:43:44,372: 	 Finish executing for file step99_K0S_20k_trees_14.root
+DEBUG 2021-02-07 14:44:44.430 UTC: 	 	INFO 2021-02-07 15:43:44,372: 	 Warning: Failed retrieving step99_K0S_20k_trees_14.root
+DEBUG 2021-02-07 14:44:44.430 UTC: 	 	INFO 2021-02-07 15:43:44,372: 	 	  [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.430 UTC: 	 	DEBUG 2021-02-07 15:43:44,372: 	 Full stderr follows:
+DEBUG 2021-02-07 14:44:44.430 UTC: 	 	gfal-copy error: 95 (Operation not supported) - Error on XrdCl::CopyProcess::Run(): [ERROR] Server responded with an error: [3013] query chksum is not supported
+DEBUG 2021-02-07 14:44:44.430 UTC: 	 	
+INFO 2021-02-07 14:44:44.477 UTC: 	 For more details about the errors please open the logfile
+INFO 2021-02-07 14:44:44.478 UTC: 	 No file retrieved
+INFO 2021-02-07 14:44:44.496 UTC: 	 Log file is /afs/cern.ch/work/m/mmyllyma/singleParticleResponse/CMSSW_10_4_0/src/PFCalibration/PFChargedHadronAnalyzer/mmylly/K0S/crab_myAnalysis_K0S_20k/crab.log
